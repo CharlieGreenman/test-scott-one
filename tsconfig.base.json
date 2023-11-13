@@ -20,6 +20,9 @@
     "paths": {
       "@test-scott-one/common/styles": [
         "libs/common/styles/src/index.ts"
+      ],
+      "@test-scott-one/common/ui": [
+        "libs/common/ui/src/index.ts"
       ]
     }
   },
