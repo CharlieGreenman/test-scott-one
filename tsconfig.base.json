@@ -10,11 +10,27 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@test-scott-one/common/styles": [
+        "libs/common/styles/src/index.ts"
+      ],
+      "@test-scott-one/common/ui": [
+        "libs/common/ui/src/index.ts"
+      ],
+      "@test-scott-one/home": [
+        "libs/home/src/index.ts"
+      ]
+    }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }
