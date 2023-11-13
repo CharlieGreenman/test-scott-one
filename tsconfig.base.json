@@ -26,6 +26,9 @@
       ],
       "@test-scott-one/home": [
         "libs/home/src/index.ts"
+      ],
+      "@test-scott-one/common/common-services": [
+        "libs/common/common-services/src/index.ts"
       ]
     }
   },
