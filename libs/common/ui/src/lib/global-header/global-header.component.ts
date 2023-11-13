@@ -5,6 +5,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { MatButtonModule } from '@angular/material/button';
 import { faBell, faQuestionCircle, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { Input } from "@angular/core";
 
 @Component({
   selector: 'test-scott-one-global-header',
@@ -12,14 +13,15 @@ import { faBell, faQuestionCircle, faUserCircle } from '@fortawesome/free-solid-
   styleUrls: ['./global-header.component.scss'],
 })
 export class GlobalHeaderComponent implements OnInit {
+  @Input() authenticated = false;
   faUserCircle = faUserCircle;
   faQuestionCircle = faQuestionCircle;
   faBell = faBell;
   @Output() sideNavToggle: EventEmitter<any> = new EventEmitter();
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   emitSideNavToggle() {
     this.sideNavToggle.emit();
@@ -37,4 +39,4 @@ export class GlobalHeaderComponent implements OnInit {
   declarations: [GlobalHeaderComponent],
   exports: [GlobalHeaderComponent],
 })
-export class GlobalHeaderComponentModule {}
+export class GlobalHeaderComponentModule { }
