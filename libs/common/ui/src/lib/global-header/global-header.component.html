@@ -1,12 +1,12 @@
 <mat-toolbar class="GlobalHeader" color="primary">
   <button
-      mat-icon-button
-      class="small-icon-button"
-      (click)="emitSideNavToggle()"
-    >
-      <mat-icon>menu</mat-icon>
+    mat-icon-button
+    class="small-icon-button"
+    (click)="emitSideNavToggle()"
+  >
+    <mat-icon>menu</mat-icon>
   </button>
-  <div class="Toolbar__Icons">
+  <div class="Toolbar__Icons" *ngIf="authenticated">
     <fa-icon
       [icon]="faBell"
       aria-hidden="false"
@@ -23,4 +23,15 @@
       aria-label="Account Icon"
     ></fa-icon>
   </div>
-</mat-toolbar>
+  <div *ngIf="!authenticated" class="GlobalHeader__authentication">
+    <button
+      mat-raised-button
+      color="accent"
+      class="GlobalHeader__log-in"
+      (click)="logInEmit()"
+    >
+      Log In
+    </button>
+    <button mat-raised-button class="GlobalHeader__sign-up">Sign Up</button>
+  </div></mat-toolbar
+>

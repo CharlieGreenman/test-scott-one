@@ -8,10 +8,11 @@ import { GlobalHeaderComponentModule } from "@test-scott-one/common/ui";
 import { GlobalFooterModule } from "@test-scott-one/common/ui";
 import { GlobalSidenavModule } from "@test-scott-one/common/ui";
 import { MatListModule } from "@angular/material/list";
+import { AuthCoreModule } from "@test-scott-one/common/common-services";
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, GlobalHeaderComponentModule, GlobalFooterModule, GlobalSidenavModule, MatListModule],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, GlobalHeaderComponentModule, GlobalFooterModule, GlobalSidenavModule, MatListModule, AuthCoreModule],
   providers: [],
   bootstrap: [AppComponent],
 })
