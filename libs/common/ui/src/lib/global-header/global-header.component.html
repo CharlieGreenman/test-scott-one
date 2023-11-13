@@ -24,7 +24,12 @@
     ></fa-icon>
   </div>
   <div *ngIf="!authenticated" class="GlobalHeader__authentication">
-    <button mat-raised-button color="accent" class="GlobalHeader__log-in">
+    <button
+      mat-raised-button
+      color="accent"
+      class="GlobalHeader__log-in"
+      (click)="logInEmit()"
+    >
       Log In
     </button>
     <button mat-raised-button class="GlobalHeader__sign-up">Sign Up</button>
