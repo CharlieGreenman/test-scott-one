@@ -6,6 +6,7 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { MatButtonModule } from '@angular/material/button';
 import { faBell, faQuestionCircle, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { Input } from "@angular/core";
+import { Input } from "@angular/core";
 
 @Component({
   selector: 'test-scott-one-global-header',
@@ -13,6 +14,7 @@ import { Input } from "@angular/core";
   styleUrls: ['./global-header.component.scss'],
 })
 export class GlobalHeaderComponent implements OnInit {
+  @Input() authenticated = false;
   @Output() signUp: EventEmitter<void> = new EventEmitter();
   @Output() logIn: EventEmitter<void> = new EventEmitter();
   @Input() authenticated = false;
